@@ -2,44 +2,45 @@ import $ from 'jquery';
 
 function fetchData (callback) {
   $.ajax({
-  url: 'https://randomuser.me/api/',
+  url: 'https://randomuser.me/api/?results=12',
   dataType: 'json',
   success: callback
   })
 }
 
 function directoryInfo(database){
-    var data = database.results[0];
+  for (var i = 0; i < database.results.length; i++) {
+  var  data = database.results[i];
 
     $(".container").append(`
-      <div class="directory">
-      <div class="profile">
+      <div class= "profile">
       <div><img src="${data.picture.large}"/>
       </div>
-        <div>
-        ${data.name.first.toUpperCase()}
-        ${data.name.last.toUpperCase()}
+        <div class = "name">
+        <span>${data.name.first}
+        ${data.name.last}</span>
         </div>
-        <div class="email">
-        ${data.email.toUpperCase()}
+        <div class= "email">
+        ${data.email}
         </div>
-        <div class="street">
+        <div class= "street">
         ${data.location.street}
         </div>
-        <div class="address">
-        ${data.location.city} ${data.location.state} ${data.location.postcode}
+        <div class= "address">
+        ${data.location.city}
+         ${data.location.state}
+        ${data.location.postcode}
         </div>
-        <div class="phone">
+        <div class= "phone">
         ${data.phone}
         </div>
-        <div class="">
+        <div class= "cell">
         ${data.cell}
           </div>
-        </div>
-      </div>`
-    );
+        </div>`
+      );  console.log(data);
+
+    }
   };
 
- for(var count = 0; count < 12; count++){
     fetchData(directoryInfo);
-};

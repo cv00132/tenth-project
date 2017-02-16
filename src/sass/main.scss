@@ -5,13 +5,69 @@
 }
 
 h1 {
-  width: 50%;
+  width: 60%;
   margin: 3% auto;
   text-align: center;
+  font-family: Nunito Sans;
+  font-weight: 800;
+  font-size: 30pt;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Raleway;
+  font-weight: 300;
+
 }
 
 .profile {
-  width: 284px;
-  height: 506px;
+  width: 211px;
+  height: 500px;
   display: inline-block;
+  float: left;
+  margin: 16px;
 }
+
+img {
+  height: 240px;
+  width: 225px;
+  padding-bottom: 15px;
+}
+
+.name {
+  font-family: Nunito Sans;
+  font-weight: 800;
+  text-transform: uppercase;
+
+  span {
+    border-bottom: 1px solid green;
+  }
+}
+
+.email{
+  font-size: 9pt;
+  padding: 12px;
+  color: lightgrey;
+  text-transform: uppercase;
+}
+
+.address, .street {
+  font-size: 10pt;
+  padding: 5px;
+  text-transform: capitalize;
+}
+
+.phone {
+  padding-bottom: 30px;
+}
+
+.cell {
+  color: green;
+  filter: blur(5px);
+}
+
+.cell:hover{
+  filter: blur(0);
+  }
