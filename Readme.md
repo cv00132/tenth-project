@@ -19,4 +19,4 @@ Javascript/AJAX/Build tool
 2. Propagated most of the HTML using `append` function
 3. Made use of ajax features to fetch data from API
 
-https://www.google.com/search?client=safari&rls=en&q=tiy-coryvaughan-tenth-project.surge.sh&ie=UTF-8&oe=UTF-8
+tiy-coryvaughan-tenth-project.surge.sh
